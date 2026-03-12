@@ -1,0 +1,133 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family:
+		system-ui,
+		-apple-system,
+		sans-serif;
+	background: #0a0606;
+	color: #e8e8e8;
+	min-height: 100dvh;
+	display: grid;
+	grid-template-rows: 1fr auto;
+}
+
+main {
+	padding: 3rem 2rem;
+	max-width: 860px;
+	margin: 0 auto;
+	width: 100%;
+}
+
+h1 {
+	font-size: clamp(1.75rem, 5vw, 2.5rem);
+	font-weight: 700;
+	letter-spacing: -0.02em;
+}
+
+.subtitle {
+	margin-top: 0.75rem;
+	color: #909090;
+	font-size: 1rem;
+	line-height: 1.6;
+}
+
+.section-title {
+	margin-top: 3rem;
+	margin-bottom: 1.25rem;
+	font-size: 1.1rem;
+	font-weight: 600;
+	color: #ff5c7c;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+}
+
+.projects-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+	gap: 1rem;
+}
+
+.project-card {
+	background: #150808;
+	border: 1px solid #2a1515;
+	border-radius: 0.5rem;
+	padding: 1.25rem;
+	text-decoration: none;
+	color: inherit;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	transition:
+		border-color 150ms ease,
+		background 150ms ease;
+}
+
+.project-card:hover {
+	border-color: #ff5c7c66;
+	background: #1a0a0a;
+}
+
+.project-card-title {
+	font-weight: 600;
+	font-size: 1rem;
+}
+
+.project-card-desc {
+	font-size: 0.875rem;
+	color: #909090;
+	line-height: 1.5;
+	flex: 1;
+}
+
+.project-card-meta {
+	display: flex;
+	gap: 0.5rem;
+	flex-wrap: wrap;
+	margin-top: 0.25rem;
+}
+
+.tag {
+	font-size: 0.75rem;
+	padding: 0.2rem 0.5rem;
+	border-radius: 9999px;
+	background: #2a1515;
+	color: #d0d0d0;
+}
+
+.status-wip {
+	background: #fff09522;
+	color: #fff095;
+}
+
+footer {
+	border-top: 1px solid #1a1010;
+	padding: 1.5rem 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1.25rem;
+}
+
+.footer-text {
+	font-size: 0.875rem;
+	color: #909090;
+}
+
+.footer-link img {
+	width: 28px;
+	height: 28px;
+	display: block;
+	opacity: 0.8;
+	transition: opacity 150ms ease;
+}
+
+.footer-link:hover img {
+	opacity: 1;
+}
