@@ -12,219 +12,220 @@
    NAO inclui @import "tailwindcss" — responsabilidade do projeto.
    ============================================== */
 
-
 /* -----------------------------------------------
    Foundations
    ----------------------------------------------- */
 
 @import "./colors.meta.css" layer(base);
-@import "./fonts.meta.css"  layer(base);
-@import "./reset.meta.css"  layer(base);
-
+@import "./fonts.meta.css" layer(base);
+@import "./reset.meta.css" layer(base);
 
 /* -----------------------------------------------
    Theme Registration
    ----------------------------------------------- */
 
 @theme {
-
-  /* -- Fonts (espelha fonts.css — mesmo namespace,
+	/* -- Fonts (espelha fonts.css — mesmo namespace,
         nao pode usar var() sem circular ref) ---- */
-  --font-sans:   "Josefin Sans", system-ui, sans-serif;
-  --font-logo:   "Changa", sans-serif;
-  --font-accent: "Tenor Sans", sans-serif;
+	--font-sans: "Josefin Sans", system-ui, sans-serif;
+	--font-logo: "Changa", sans-serif;
+	--font-accent: "Tenor Sans", sans-serif;
 
-  /* -- Typography Scale ------------------------ */
-  --text-xs:   0.75rem;
-  --text-sm:   0.875rem;
-  --text-base: 1rem;
-  --text-md:   1.125rem;
-  --text-lg:   1.25rem;
-  --text-xl:   1.5rem;
-  --text-2xl:  2rem;
-  --text-3xl:  2.5rem;
-  --text-4xl:  3rem;
-  --text-5xl:  4rem;
-  --text-6xl:  5rem;
+	/* -- Typography Scale ------------------------ */
+	--text-xs: 0.75rem;
+	--text-sm: 0.875rem;
+	--text-base: 1rem;
+	--text-md: 1.125rem;
+	--text-lg: 1.25rem;
+	--text-xl: 1.5rem;
+	--text-2xl: 2rem;
+	--text-3xl: 2.5rem;
+	--text-4xl: 3rem;
+	--text-5xl: 4rem;
+	--text-6xl: 5rem;
 
-  /* -- Leading --------------------------------- */
-  --leading-tight:   1.1;
-  --leading-snug:    1.3;
-  --leading-normal:  1.5;
-  --leading-relaxed: 1.65;
+	/* -- Leading --------------------------------- */
+	--leading-tight: 1.1;
+	--leading-snug: 1.3;
+	--leading-normal: 1.5;
+	--leading-relaxed: 1.65;
 
-  /* -- Tracking -------------------------------- */
-  --tracking-tight:  -0.02em;
-  --tracking-normal: 0em;
-  --tracking-wide:   0.04em;
-  --tracking-wider:  0.08em;
+	/* -- Tracking -------------------------------- */
+	--tracking-tight: -0.02em;
+	--tracking-normal: 0em;
+	--tracking-wide: 0.04em;
+	--tracking-wider: 0.08em;
 
-
-  /* ===========================================
+	/* ===========================================
      CORES PRIMITIVAS
      Shades constantes (50-950). Referenciam
      colors.css via var(). Sem colisao de namespace:
      --color-primary-50 (Tailwind) != --primary-50 (colors.css)
      =========================================== */
 
-  /* -- Neutral (50-950) ------------------------ */
-  --color-neutral-50:  var(--neutral-50);
-  --color-neutral-100: var(--neutral-100);
-  --color-neutral-150: var(--neutral-150);
-  --color-neutral-200: var(--neutral-200);
-  --color-neutral-250: var(--neutral-250);
-  --color-neutral-300: var(--neutral-300);
-  --color-neutral-350: var(--neutral-350);
-  --color-neutral-400: var(--neutral-400);
-  --color-neutral-450: var(--neutral-450);
-  --color-neutral-500: var(--neutral-500);
-  --color-neutral-550: var(--neutral-550);
-  --color-neutral-600: var(--neutral-600);
-  --color-neutral-650: var(--neutral-650);
-  --color-neutral-700: var(--neutral-700);
-  --color-neutral-750: var(--neutral-750);
-  --color-neutral-800: var(--neutral-800);
-  --color-neutral-850: var(--neutral-850);
-  --color-neutral-900: var(--neutral-900);
-  --color-neutral-950: var(--neutral-950);
-  --color-neutral:     var(--neutral-500);
+	/* -- Neutral (50-950) ------------------------ */
+	--color-neutral-50: var(--neutral-50);
+	--color-neutral-100: var(--neutral-100);
+	--color-neutral-150: var(--neutral-150);
+	--color-neutral-200: var(--neutral-200);
+	--color-neutral-250: var(--neutral-250);
+	--color-neutral-300: var(--neutral-300);
+	--color-neutral-350: var(--neutral-350);
+	--color-neutral-400: var(--neutral-400);
+	--color-neutral-450: var(--neutral-450);
+	--color-neutral-500: var(--neutral-500);
+	--color-neutral-550: var(--neutral-550);
+	--color-neutral-600: var(--neutral-600);
+	--color-neutral-650: var(--neutral-650);
+	--color-neutral-700: var(--neutral-700);
+	--color-neutral-750: var(--neutral-750);
+	--color-neutral-800: var(--neutral-800);
+	--color-neutral-850: var(--neutral-850);
+	--color-neutral-900: var(--neutral-900);
+	--color-neutral-950: var(--neutral-950);
+	--color-neutral: var(--neutral-500);
 
-  /* -- Primary (50-950) ------------------------ */
-  --color-primary-50:  var(--primary-50);
-  --color-primary-100: var(--primary-100);
-  --color-primary-150: var(--primary-150);
-  --color-primary-200: var(--primary-200);
-  --color-primary-250: var(--primary-250);
-  --color-primary-300: var(--primary-300);
-  --color-primary-350: var(--primary-350);
-  --color-primary-400: var(--primary-400);
-  --color-primary-450: var(--primary-450);
-  --color-primary-500: var(--primary-500);
-  --color-primary-550: var(--primary-550);
-  --color-primary-600: var(--primary-600);
-  --color-primary-650: var(--primary-650);
-  --color-primary-700: var(--primary-700);
-  --color-primary-750: var(--primary-750);
-  --color-primary-800: var(--primary-800);
-  --color-primary-850: var(--primary-850);
-  --color-primary-900: var(--primary-900);
-  --color-primary-950: var(--primary-950);
+	/* -- Primary (50-950) ------------------------ */
+	--color-primary-50: var(--primary-50);
+	--color-primary-100: var(--primary-100);
+	--color-primary-150: var(--primary-150);
+	--color-primary-200: var(--primary-200);
+	--color-primary-250: var(--primary-250);
+	--color-primary-300: var(--primary-300);
+	--color-primary-350: var(--primary-350);
+	--color-primary-400: var(--primary-400);
+	--color-primary-450: var(--primary-450);
+	--color-primary-500: var(--primary-500);
+	--color-primary-550: var(--primary-550);
+	--color-primary-600: var(--primary-600);
+	--color-primary-650: var(--primary-650);
+	--color-primary-700: var(--primary-700);
+	--color-primary-750: var(--primary-750);
+	--color-primary-800: var(--primary-800);
+	--color-primary-850: var(--primary-850);
+	--color-primary-900: var(--primary-900);
+	--color-primary-950: var(--primary-950);
 
-  /* -- Primary Muted (50-950) ------------------ */
-  --color-primary-muted-50:  var(--primary-muted-50);
-  --color-primary-muted-100: var(--primary-muted-100);
-  --color-primary-muted-150: var(--primary-muted-150);
-  --color-primary-muted-200: var(--primary-muted-200);
-  --color-primary-muted-250: var(--primary-muted-250);
-  --color-primary-muted-300: var(--primary-muted-300);
-  --color-primary-muted-350: var(--primary-muted-350);
-  --color-primary-muted-400: var(--primary-muted-400);
-  --color-primary-muted-450: var(--primary-muted-450);
-  --color-primary-muted-500: var(--primary-muted-500);
-  --color-primary-muted-550: var(--primary-muted-550);
-  --color-primary-muted-600: var(--primary-muted-600);
-  --color-primary-muted-650: var(--primary-muted-650);
-  --color-primary-muted-700: var(--primary-muted-700);
-  --color-primary-muted-750: var(--primary-muted-750);
-  --color-primary-muted-800: var(--primary-muted-800);
-  --color-primary-muted-850: var(--primary-muted-850);
-  --color-primary-muted-900: var(--primary-muted-900);
-  --color-primary-muted-950: var(--primary-muted-950);
+	/* -- Primary Muted (50-950) ------------------ */
+	--color-primary-muted-50: var(--primary-muted-50);
+	--color-primary-muted-100: var(--primary-muted-100);
+	--color-primary-muted-150: var(--primary-muted-150);
+	--color-primary-muted-200: var(--primary-muted-200);
+	--color-primary-muted-250: var(--primary-muted-250);
+	--color-primary-muted-300: var(--primary-muted-300);
+	--color-primary-muted-350: var(--primary-muted-350);
+	--color-primary-muted-400: var(--primary-muted-400);
+	--color-primary-muted-450: var(--primary-muted-450);
+	--color-primary-muted-500: var(--primary-muted-500);
+	--color-primary-muted-550: var(--primary-muted-550);
+	--color-primary-muted-600: var(--primary-muted-600);
+	--color-primary-muted-650: var(--primary-muted-650);
+	--color-primary-muted-700: var(--primary-muted-700);
+	--color-primary-muted-750: var(--primary-muted-750);
+	--color-primary-muted-800: var(--primary-muted-800);
+	--color-primary-muted-850: var(--primary-muted-850);
+	--color-primary-muted-900: var(--primary-muted-900);
+	--color-primary-muted-950: var(--primary-muted-950);
 
-  /* -- Secondary (50-950) ---------------------- */
-  --color-secondary-50:  var(--secondary-50);
-  --color-secondary-100: var(--secondary-100);
-  --color-secondary-150: var(--secondary-150);
-  --color-secondary-200: var(--secondary-200);
-  --color-secondary-250: var(--secondary-250);
-  --color-secondary-300: var(--secondary-300);
-  --color-secondary-350: var(--secondary-350);
-  --color-secondary-400: var(--secondary-400);
-  --color-secondary-450: var(--secondary-450);
-  --color-secondary-500: var(--secondary-500);
-  --color-secondary-550: var(--secondary-550);
-  --color-secondary-600: var(--secondary-600);
-  --color-secondary-650: var(--secondary-650);
-  --color-secondary-700: var(--secondary-700);
-  --color-secondary-750: var(--secondary-750);
-  --color-secondary-800: var(--secondary-800);
-  --color-secondary-850: var(--secondary-850);
-  --color-secondary-900: var(--secondary-900);
-  --color-secondary-950: var(--secondary-950);
+	/* -- Secondary (50-950) ---------------------- */
+	--color-secondary-50: var(--secondary-50);
+	--color-secondary-100: var(--secondary-100);
+	--color-secondary-150: var(--secondary-150);
+	--color-secondary-200: var(--secondary-200);
+	--color-secondary-250: var(--secondary-250);
+	--color-secondary-300: var(--secondary-300);
+	--color-secondary-350: var(--secondary-350);
+	--color-secondary-400: var(--secondary-400);
+	--color-secondary-450: var(--secondary-450);
+	--color-secondary-500: var(--secondary-500);
+	--color-secondary-550: var(--secondary-550);
+	--color-secondary-600: var(--secondary-600);
+	--color-secondary-650: var(--secondary-650);
+	--color-secondary-700: var(--secondary-700);
+	--color-secondary-750: var(--secondary-750);
+	--color-secondary-800: var(--secondary-800);
+	--color-secondary-850: var(--secondary-850);
+	--color-secondary-900: var(--secondary-900);
+	--color-secondary-950: var(--secondary-950);
 
-  /* -- Accent (50-950) ------------------------- */
-  --color-accent-50:  var(--accent-50);
-  --color-accent-100: var(--accent-100);
-  --color-accent-150: var(--accent-150);
-  --color-accent-200: var(--accent-200);
-  --color-accent-250: var(--accent-250);
-  --color-accent-300: var(--accent-300);
-  --color-accent-350: var(--accent-350);
-  --color-accent-400: var(--accent-400);
-  --color-accent-450: var(--accent-450);
-  --color-accent-500: var(--accent-500);
-  --color-accent-550: var(--accent-550);
-  --color-accent-600: var(--accent-600);
-  --color-accent-650: var(--accent-650);
-  --color-accent-700: var(--accent-700);
-  --color-accent-750: var(--accent-750);
-  --color-accent-800: var(--accent-800);
-  --color-accent-850: var(--accent-850);
-  --color-accent-900: var(--accent-900);
-  --color-accent-950: var(--accent-950);
+	/* -- Accent (50-950) ------------------------- */
+	--color-accent-50: var(--accent-50);
+	--color-accent-100: var(--accent-100);
+	--color-accent-150: var(--accent-150);
+	--color-accent-200: var(--accent-200);
+	--color-accent-250: var(--accent-250);
+	--color-accent-300: var(--accent-300);
+	--color-accent-350: var(--accent-350);
+	--color-accent-400: var(--accent-400);
+	--color-accent-450: var(--accent-450);
+	--color-accent-500: var(--accent-500);
+	--color-accent-550: var(--accent-550);
+	--color-accent-600: var(--accent-600);
+	--color-accent-650: var(--accent-650);
+	--color-accent-700: var(--accent-700);
+	--color-accent-750: var(--accent-750);
+	--color-accent-800: var(--accent-800);
+	--color-accent-850: var(--accent-850);
+	--color-accent-900: var(--accent-900);
+	--color-accent-950: var(--accent-950);
 
-
-  /* ===========================================
+	/* ===========================================
      ALIASES
      Shortcuts semanticos sem shade range.
      =========================================== */
 
-  --color-main-1: var(--main-1);
-  --color-main-2: var(--main-2);
-  --color-sec-1:  var(--sec-1);
-  --color-sec-2:  var(--sec-2);
-  --color-black:  var(--black);
-  --color-white:  var(--white);
-  --color-gray:   var(--gray);
+	--color-main-1: var(--main-1);
+	--color-main-2: var(--main-2);
+	--color-sec-1: var(--sec-1);
+	--color-sec-2: var(--sec-2);
+	--color-black: var(--black);
+	--color-white: var(--white);
+	--color-gray: var(--gray);
 
-
-  /* ===========================================
+	/* ===========================================
      CORES SEMANTICAS
      Defaults dark — referenciam tokens primitivos
      de colors.css. O layer(base) sobrescreve via
      cascade para dark/light theming.
      =========================================== */
 
-  /* Layout */
-  --color-bg:             var(--neutral-900);
-  --color-surface:        var(--neutral-700);
-  --color-surface-raised: var(--neutral-600);
+	/* Layout */
+	--color-bg: var(--neutral-900);
+	--color-surface: var(--neutral-800);
+	--color-surface-hover: #1a0a0a;
+	--color-surface-raised: var(--neutral-600);
 
-  /* Text */
-  --color-text:           var(--neutral-100);
-  --color-text-secondary: var(--neutral-300);
-  --color-text-muted:     var(--neutral-400);
+	/* Text */
+	--color-text: var(--neutral-100);
+	--color-text-secondary: var(--neutral-200);
+	--color-text-muted: var(--neutral-500);
+	--color-muted: var(--neutral-500);
 
-  /* Borders */
-  --color-border:         var(--neutral-600);
-  --color-border-strong:  var(--neutral-400);
-  --color-divider:        var(--neutral-700);
+	/* Borders */
+	--color-border: var(--neutral-850);
+	--color-border-hover: #ff5c7c66;
+	--color-border-subtle: var(--neutral-900);
+	--color-border-strong: var(--neutral-400);
+	--color-divider: var(--neutral-700);
 
-  /* Primary semantic */
-  --color-primary:        var(--primary);
-  --color-primary-hover:  var(--primary-300);
-  --color-primary-soft:   var(--primary-muted);
-  --color-primary-muted:  var(--primary-muted-800);
+	/* Primary semantic */
+	--color-primary: var(--primary);
+	--color-primary-hover: var(--primary-300);
+	--color-primary-soft: var(--primary-muted);
+	--color-primary-muted: var(--primary-muted-800);
 
-  /* Secondary semantic */
-  --color-secondary:      var(--secondary);
-  --color-secondary-soft: var(--secondary-200);
-  --color-secondary-dark: var(--secondary-900);
+	/* Secondary semantic */
+	--color-secondary: var(--secondary);
+	--color-secondary-soft: var(--secondary-200);
+	--color-secondary-dark: var(--secondary-900);
 
-  /* Accent semantic */
-  --color-accent:         var(--accent);
-  --color-accent-hover:   var(--accent-100);
-  --color-accent-soft:    var(--accent-400);
-  --color-accent-muted:   var(--accent-900);
+	/* Accent semantic */
+	--color-accent: var(--accent);
+	--color-accent-hover: var(--accent-100);
+	--color-accent-soft: var(--accent-400);
+	--color-accent-muted: var(--accent-900);
+
+	/* CSS3Tooling page */
+	--color-indigo-500: #6366f1;
+	--color-neutral-50: var(--neutral-50);
 }
-

@@ -18,8 +18,8 @@ const socialLinks = [
 
 export function Footer() {
 	return (
-		<footer className="flex items-center justify-center gap-5 border-t border-border-subtle px-8 py-6">
-			<span className="text-sm text-muted">Feel free to reach out</span>
+		<footer className="border-border-subtle flex items-center justify-center gap-5 border-t px-8 py-6">
+			<span className="text-muted text-sm">Feel free to reach out</span>
 			{socialLinks.map(link => (
 				<a
 					key={link.icon}

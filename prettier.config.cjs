@@ -1,8 +1,8 @@
 const config = {
 	plugins: [
 		'prettier-plugin-organize-imports',
-		'prettier-plugin-tailwindcss',
 		'prettier-plugin-packagejson',
+		'prettier-plugin-tailwindcss',
 	],
 	printWidth: 80,
 

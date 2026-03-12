@@ -32,7 +32,7 @@ export function ProjectCard({
 					</span>
 				))}
 				{status === 'In Progress' && (
-					<span className="bg-primary text-white rounded-full px-2 py-0.5 text-xs">
+					<span className="bg-primary rounded-full px-2 py-0.5 text-xs text-white">
 						{status}
 					</span>
 				)}
@@ -40,4 +40,3 @@ export function ProjectCard({
 		</Link>
 	);
 }
-
