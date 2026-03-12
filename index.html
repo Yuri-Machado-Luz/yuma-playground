@@ -6,77 +6,15 @@
 			name="viewport"
 			content="width=device-width, initial-scale=1.0" />
 		<title>YUMA — Playground</title>
-		<script
-			type="module"
-			src="/src/main.js"></script>
+		<link
+			rel="shortcut icon"
+			href="/favicon.svg"
+			type="image/svg+xml" />
 	</head>
 	<body>
-		<main>
-			<div class="warning">
-				<h1>⚠️ WORK IN PROGRESS ⚠️</h1>
-				<p>
-					This is a personal playground for experimenting with web technologies.
-					Projects here are works in progress and may not be fully polished or
-					functional. Use at your own risk!
-				</p>
-			</div>
-			<header>
-				<h1>Welcome to my Playground!</h1>
-				<p class="subtitle">
-					A space to experiment with various technologies, share projects and
-					document the learning journey.
-				</p>
-			</header>
-
-			<div class="project-container">
-				<p class="section-title">Web Projects</p>
-				<div class="projects-grid">
-					<a
-						class="project-card"
-						href="./projects/web/css3-tooling/index.html">
-						<span class="project-card-title">CSS3 Tooling</span>
-						<span class="project-card-desc"
-							>Interactive tools to explore CSS3 features — layouts, animations,
-							transitions and modern visual effects. Vanilla HTML + CSS +
-							JS.</span
-						>
-						<div class="project-card-meta">
-							<span class="tag">HTML</span>
-							<span class="tag">CSS</span>
-							<span class="tag">JavaScript</span>
-							<span class="tag status-wip">In Progress</span>
-						</div>
-					</a>
-				</div>
-			</div>
-		</main>
-
-		<footer>
-			<span class="footer-text">Feel free to reach out</span>
-			<a
-				class="footer-link"
-				href="mailto:yurimachadoluz@gmail.com"
-				aria-label="Gmail">
-				<img
-					src="https://skillicons.dev/icons?i=gmail"
-					alt="Gmail" />
-			</a>
-			<a
-				class="footer-link"
-				href="https://github.com/Yuri-Machado-Luz"
-				aria-label="GitHub">
-				<img
-					src="https://skillicons.dev/icons?i=github"
-					alt="GitHub" />
-			</a>
-			<a
-				class="footer-link"
-				href="https://linkedin.com/in/yurimachadoluz0311"
-				aria-label="LinkedIn">
-				<img
-					src="https://skillicons.dev/icons?i=linkedin"
-					alt="LinkedIn" />
-			</a>
-		</footer>
+		<div id="root"></div>
+		<script
+			type="module"
+			src="/src/main.tsx"></script>
 	</body>
 </html>
