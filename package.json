@@ -1,0 +1,21 @@
+{
+	"name": "yuma-playground",
+	"version": "1.0.0",
+	"description": "Personal playground for web experiments — Yuri Machado Luz",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "vite preview"
+	},
+	"author": "Yuri Machado Luz",
+	"license": "MIT",
+	"packageManager": "pnpm@10.31.0",
+	"devDependencies": {
+		"vite": "^7.3.1"
+	},
+	"pnpm": {
+		"onlyBuiltDependencies": [
+			"esbuild"
+		]
+	}
+}
