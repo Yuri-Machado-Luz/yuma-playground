@@ -15,8 +15,6 @@
   </tr>
 </table>
 
----
-
 <footer class="foot">
 <p> Feel free to reach out </p>
 <a class="btn" href="mailto:yurimachadoluz@gmail.com"><img src="https://skillicons.dev/icons?i=gmail" alt="Gmail"/></a>
