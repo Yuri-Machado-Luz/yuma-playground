@@ -1,0 +1,13 @@
+{
+	"compilerOptions": {
+		"module": "ESNext",
+		"moduleResolution": "bundler",
+		"target": "ESNext",
+		"checkJs": true,
+		"paths": {
+			"@/*": ["./src/*"]
+		}
+	},
+	"include": ["vite.config.js", "src/**/*.js", "projects/web/*/src/**/*.js"],
+	"exclude": ["node_modules", "dist", "build"]
+}
