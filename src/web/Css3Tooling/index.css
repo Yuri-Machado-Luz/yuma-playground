@@ -1,0 +1,115 @@
+.css3-page {
+	min-height: 100dvh;
+	background-color: var(--color-bg);
+	color: var(--color-text);
+	font-family:
+		system-ui,
+		-apple-system,
+		sans-serif;
+}
+
+/* Navigation */
+.css3-nav-main,
+.css3-nav-resources {
+	background-color: var(--color-indigo-500);
+	color: var(--color-neutral-50);
+	padding: 1.5rem;
+	box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.css3-nav-main ul {
+	display: flex;
+	gap: 2rem;
+}
+
+.css3-nav-main a {
+	transition: opacity 150ms ease;
+}
+
+.css3-nav-main a:hover {
+	opacity: 0.8;
+}
+
+.css3-nav-resources {
+	display: flex;
+	justify-content: center;
+}
+
+.css3-nav-resources ul {
+	display: flex;
+	gap: 3rem;
+	text-transform: uppercase;
+}
+
+/* Hero */
+.css3-hero {
+	margin: 10rem auto 12rem;
+	text-align: center;
+}
+
+.css3-hero h1 {
+	margin-bottom: 1.5rem;
+	font-size: clamp(2rem, 5vw, 3rem);
+	font-weight: 700;
+}
+
+.css3-hero p {
+	font-size: clamp(0.5rem, 1.75vw, 1.2rem);
+	line-height: 1.625;
+	color: var(--color-muted);
+}
+
+/* Content */
+.css3-content {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+/* Sections */
+.css3-sections {
+	display: flex;
+	flex-direction: column;
+}
+
+.css3-sections section {
+	margin-bottom: 2rem;
+	text-align: center;
+}
+
+.css3-sections h2 {
+	margin-bottom: 2rem;
+	font-size: 1.25rem;
+	font-weight: 500;
+}
+
+/* About */
+.css3-about {
+	display: flex;
+	flex-direction: column;
+}
+
+.css3-about h2 {
+	margin-bottom: 2rem;
+	text-align: center;
+	font-size: 1.25rem;
+	font-weight: 500;
+}
+
+.css3-about h3 {
+	margin: 0 auto 1.5rem;
+	font-size: 1rem;
+}
+
+.css3-about p {
+	margin: 0 auto 2rem;
+	max-width: 600px;
+	text-align: justify;
+	line-height: 1.625;
+}
+
+/* Footer */
+.css3-footer {
+	margin: 3rem;
+	text-align: center;
+}
