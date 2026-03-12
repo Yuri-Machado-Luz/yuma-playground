@@ -1,0 +1,242 @@
+/* ==============================================
+   Sistema de Cores — Yuma Design Tokens
+
+   Escala: 50 (claro) → 500 (base) → 950 (escuro)
+   ============================================== */
+
+
+/* -----------------------------------------------
+   Primitivas — Dark (default)
+   ----------------------------------------------- */
+
+:root,
+[data-theme="dark"] {
+
+    /* Neutral */
+    --neutral-50:  #ffffffff;
+    --neutral-100: #ffffffff;
+    --neutral-150: #fafafaff;
+    --neutral-200: #f5f5f5ff;
+    --neutral-250: #e8e6e4ff;
+    --neutral-300: #dbd7d2ff;
+    --neutral-350: #cdcbccff;
+    --neutral-400: #bebfc5ff;
+    --neutral-450: #9fa0a3ff;
+    --neutral-500: #808080ff;
+    --neutral-550: #6b6b6bff;
+    --neutral-600: #555555ff;
+    --neutral-650: #454545ff;
+    --neutral-700: #343434ff;
+    --neutral-750: #2c2b2cff;
+    --neutral-800: #242124ff;
+    --neutral-850: #121112ff;
+    --neutral-900: #000000ff;
+    --neutral-950: #000000ff;
+
+    /* Base */
+    --primary: #bf0603ff;
+    --primary-muted: #ed302dff;
+    --secondary: #04bfa9ff;
+    --accent: #f9c80eff;
+
+    /* Aliases */
+    --main-1: var(--primary);
+    --main-2: var(--primary-muted);
+    --sec-1: var(--secondary);
+    --sec-2: var(--accent);
+    --black: var(--neutral-900);
+    --white: var(--neutral-100);
+    --gray: var(--neutral-500);
+
+    /* Primary · #bf0603 */
+    --primary-50:  #d76764ff;
+    --primary-100: #d35653ff;
+    --primary-150: #d14e4bff;
+    --primary-200: #cf4542ff;
+    --primary-250: #cd3c39ff;
+    --primary-300: #ca322fff;
+    --primary-350: #c82825ff;
+    --primary-400: #c51d1aff;
+    --primary-450: #c2120fff;
+    --primary-500: var(--primary);
+    --primary-550: #b70603ff;
+    --primary-600: #ae0503ff;
+    --primary-650: #a60503ff;
+    --primary-700: #9e0503ff;
+    --primary-750: #970503ff;
+    --primary-800: #900503ff;
+    --primary-850: #8a0503ff;
+    --primary-900: #830503ff;
+    --primary-950: #760503ff;
+
+    /* Primary Muted · #ed302d */
+    --primary-muted-50:  #f3807dff;
+    --primary-muted-100: #f2726fff;
+    --primary-muted-150: #f26b68ff;
+    --primary-muted-200: #f16461ff;
+    --primary-muted-250: #f15c59ff;
+    --primary-muted-300: #f05451ff;
+    --primary-muted-350: #f04c49ff;
+    --primary-muted-400: #ef4340ff;
+    --primary-muted-450: #ee3a37ff;
+    --primary-muted-500: var(--primary-muted);
+    --primary-muted-550: #e22e2bff;
+    --primary-muted-600: #d72c29ff;
+    --primary-muted-650: #cd2a27ff;
+    --primary-muted-700: #c32825ff;
+    --primary-muted-750: #ba2624ff;
+    --primary-muted-800: #b12422ff;
+    --primary-muted-850: #a92321ff;
+    --primary-muted-900: #a1211fff;
+    --primary-muted-950: #911e1cff;
+
+    /* Secondary · #04bfa9 */
+    --secondary-50:  #65d7caff;
+    --secondary-100: #54d3c4ff;
+    --secondary-150: #4cd1c1ff;
+    --secondary-200: #43cfbeff;
+    --secondary-250: #3acdbbff;
+    --secondary-300: #30cab8ff;
+    --secondary-350: #26c8b5ff;
+    --secondary-400: #1bc5b1ff;
+    --secondary-450: #10c2adff;
+    --secondary-500: var(--secondary);
+    --secondary-550: #04b7a2ff;
+    --secondary-600: #04ae9aff;
+    --secondary-650: #04a693ff;
+    --secondary-700: #049e8cff;
+    --secondary-750: #049786ff;
+    --secondary-800: #04907fff;
+    --secondary-850: #048a79ff;
+    --secondary-900: #048373ff;
+    --secondary-950: #047667ff;
+
+    /* Accent · #f9c80e */
+    --accent-50:  #fade6aff;
+    --accent-100: #fada5aff;
+    --accent-150: #fad852ff;
+    --accent-200: #fad64aff;
+    --accent-250: #fad441ff;
+    --accent-300: #fad238ff;
+    --accent-350: #fad02eff;
+    --accent-400: #facd24ff;
+    --accent-450: #facb19ff;
+    --accent-500: var(--accent);
+    --accent-550: #eebf0eff;
+    --accent-600: #e2b60dff;
+    --accent-650: #d8ae0dff;
+    --accent-700: #cda50cff;
+    --accent-750: #c49e0cff;
+    --accent-800: #ba960bff;
+    --accent-850: #b28f0bff;
+    --accent-900: #a9880aff;
+    --accent-950: #987a09ff;
+
+
+    /* --- Tokens Semanticos (Dark) --- */
+    --color-bg:             var(--neutral-900);
+    --color-surface:        var(--neutral-700);
+    --color-surface-raised: var(--neutral-600);
+
+    --color-text:           var(--neutral-100);
+    --color-text-secondary: var(--neutral-300);
+    --color-text-muted:     var(--neutral-400);
+
+    --color-border:         var(--neutral-600);
+    --color-border-strong:  var(--neutral-400);
+    --color-divider:        var(--neutral-700);
+
+    --color-primary:         var(--primary);
+    --color-primary-hover:   var(--primary-300);
+    --color-primary-soft:    var(--primary-muted);
+    --color-primary-muted:   var(--primary-muted-800);
+
+    --color-secondary:      var(--secondary);
+    --color-secondary-soft: var(--secondary-200);
+    --color-secondary-dark: var(--secondary-900);
+
+    --color-accent:         var(--accent);
+    --color-accent-hover:   var(--accent-100);
+    --color-accent-soft:    var(--accent-400);
+    --color-accent-muted:   var(--accent-900);
+
+    --color-black: #000000;
+    --color-white: #FFFFFF;
+}
+
+
+/* -----------------------------------------------
+   Primitivas — Light
+   ----------------------------------------------- */
+
+[data-theme="light"] {
+
+    /* --- Tokens Semanticos (Light) --- */
+    --color-bg:             var(--neutral-100);
+    --color-surface:        var(--neutral-50);
+    --color-surface-raised: var(--neutral-200);
+
+    --color-text:           var(--neutral-900);
+    --color-text-secondary: var(--neutral-600);
+    --color-text-muted:     var(--neutral-500);
+
+    --color-border:         var(--neutral-300);
+    --color-border-strong:  var(--neutral-500);
+    --color-divider:        var(--neutral-250);
+
+    --color-primary:         var(--primary);
+    --color-primary-hover:   var(--primary-700);
+    --color-primary-soft:    var(--primary-100);
+    --color-primary-muted:   var(--primary-50);
+
+    --color-secondary:      var(--secondary-800);
+    --color-secondary-soft: var(--secondary-200);
+    --color-secondary-dark: var(--secondary-900);
+
+    --color-accent:         var(--accent-700);
+    --color-accent-hover:   var(--accent-900);
+    --color-accent-soft:    var(--accent-200);
+    --color-accent-muted:   var(--accent-100);
+
+    --color-black: #000000;
+    --color-white: #FFFFFF;
+}
+
+
+/* -----------------------------------------------
+   Auto — prefers-color-scheme (light fallback)
+   ----------------------------------------------- */
+
+@media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]) {
+
+        --color-bg:             var(--neutral-100);
+        --color-surface:        var(--neutral-50);
+        --color-surface-raised: var(--neutral-200);
+
+        --color-text:           var(--neutral-900);
+        --color-text-secondary: var(--neutral-600);
+        --color-text-muted:     var(--neutral-500);
+
+        --color-border:         var(--neutral-300);
+        --color-border-strong:  var(--neutral-500);
+        --color-divider:        var(--neutral-250);
+
+        --color-primary:         var(--primary);
+        --color-primary-hover:   var(--primary-700);
+        --color-primary-soft:    var(--primary-100);
+        --color-primary-muted:   var(--primary-50);
+
+        --color-secondary:      var(--secondary-800);
+        --color-secondary-soft: var(--secondary-200);
+        --color-secondary-dark: var(--secondary-900);
+
+        --color-accent:         var(--accent-700);
+        --color-accent-hover:   var(--accent-900);
+        --color-accent-soft:    var(--accent-200);
+        --color-accent-muted:   var(--accent-100);
+
+        --color-black: #000000;
+        --color-white: #FFFFFF;
+    }
+}
