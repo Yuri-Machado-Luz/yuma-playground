@@ -1,6 +1,6 @@
 # Dependencies
 node_modules/
-pnpm-lock.yaml
+# pnpm-lock.yaml é versionado intencionalmente — garante builds reproduzíveis no CI
 package-lock.json
 yarn.lock
 
