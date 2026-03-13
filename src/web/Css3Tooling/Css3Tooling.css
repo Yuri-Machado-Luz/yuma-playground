@@ -6,9 +6,17 @@
 		system-ui,
 		-apple-system,
 		sans-serif;
+	scroll-snap-type: y mandatory;
+	scroll-behavior: smooth;
+	scroll-padding-top: 4.5rem;
 }
 
 /* Navigation */
+.css3-nav-main {
+	position: sticky;
+	top: 0;
+}
+
 .css3-nav-main,
 .css3-nav-resources {
 	background-color: var(--color-indigo-500);
@@ -33,6 +41,9 @@
 .css3-nav-resources {
 	display: flex;
 	justify-content: center;
+	scroll-snap-align: start;
+	scroll-snap-stop: always;
+	scroll-margin-top: 4.5rem;
 }
 
 .css3-nav-resources ul {

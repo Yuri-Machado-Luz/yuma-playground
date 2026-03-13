@@ -1,6 +1,4 @@
-﻿@import "./styles/ProjectCard.css";
-
-.home {
+﻿.home {
 	display: grid;
 	min-height: 100dvh;
 	grid-template-rows: 1fr auto;
@@ -61,6 +59,12 @@
 .project-container {
 	margin: 0 auto;
 	flex: 1;
+}
+
+.projects-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+	gap: 1rem;
 }
 
 .section-label {

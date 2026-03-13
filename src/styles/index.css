@@ -1,7 +1,4 @@
 @import "tailwindcss";
-@import "./tokens/reset.meta.css" layer(base);
-@import "./tokens/colors.meta.css" layer(base);
-@import "./tokens/fonts.meta.css" layer(base);
 @import "./tokens/tailwind.theme.meta.css" layer(base);
 
 /* =====================================================

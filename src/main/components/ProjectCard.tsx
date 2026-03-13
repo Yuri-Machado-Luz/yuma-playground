@@ -1,12 +1,32 @@
+import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
+import styles from './ProjectCard.module.css';
 
+// TYPES
 interface ProjectCardProps {
 	title: string;
 	description: string;
 	tags: string[];
-	status: 'In Progress' | 'Done';
+	status: 'In Progress' | 'Alpha' | `V${number}`;
 	href: string;
 }
+
+// CONSTANTS
+// STYLES
+
+const STATUS_VARIANTS = {
+	'In Progress': 'in-progress',
+	Alpha: 'alpha',
+} as const;
+
+const getStatusClass = (status: string): string | null => {
+	if (status in STATUS_VARIANTS) {
+		return STATUS_VARIANTS[status as keyof typeof STATUS_VARIANTS];
+	} else if (status.startsWith('V')) {
+		return 'version';
+	}
+	return null;
+};
 
 export function ProjectCard({
 	title,
@@ -15,25 +35,32 @@ export function ProjectCard({
 	status,
 	href,
 }: ProjectCardProps) {
+	const { t } = useTranslation();
+	const statusClass = getStatusClass(status);
+
+	const getStatusTranslation = () => {
+		if (status === 'In Progress') return t('status.inProgress');
+		if (status === 'Alpha') return t('status.alpha');
+		return status;
+	};
+
 	return (
 		<Link
-			className="border-border bg-surface hover:border-border-hover hover:bg-surface-hover flex flex-col gap-2 rounded-lg border p-5 no-underline transition-[border-color,background] duration-150 ease-in-out"
+			className={styles.card}
 			to={href}>
-			<span className="text-base font-semibold">{title}</span>
-			<span className="text-muted flex-1 text-sm leading-relaxed">
-				{description}
-			</span>
-			<div className="mt-1 flex flex-wrap gap-2">
+			<span className={styles.title}>{title}</span>
+			<span className={styles.description}>{description}</span>
+			<div className={styles.tags}>
 				{tags.map(tag => (
 					<span
 						key={tag}
-						className="bg-border text-text-secondary rounded-full px-2 py-0.5 text-xs">
+						className={styles.tag}>
 						{tag}
 					</span>
 				))}
-				{status === 'In Progress' && (
-					<span className="bg-primary rounded-full px-2 py-0.5 text-xs text-white">
-						{status}
+				{statusClass && (
+					<span className={`${styles.status} ${styles[statusClass]}`}>
+						{getStatusTranslation()}
 					</span>
 				)}
 			</div>
